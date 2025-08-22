@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+// COLORS
+$theme-colors: (
+    "primary": #0074d9,
+    "secondary": #6c757d,
+    "success": #28a745,
+    "danger": #ff4136,
+    "warning": #ffc107,
+    "info": #17a2b8,
+    "light": #f8f9fa,
+    "dark": #343a40,
+    "white": #ffffff,
+    "transparent": transparent,
+);
+
+// TEXT
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: Georgia, "Times New Roman", Times, serif;
+$font-family-base: $font-family-sans-serif;
+$font-size-base: 1rem;
+
+// BREAKPOINTS
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+);
+
+// SEE DOCS FOR MORE:
+// https://bit.ly/2sgFMdb
+
+// IMPORT BOOTSTRAP
+@import "~bootstrap/scss/bootstrap";
+
+// IMPORT FONT AWESOME
+@import url("https://use.fontawesome.com/releases/v5.10.1/css/all.css");
+
+#__next {
+    // Full height of screen and flex so that we can push footer
+    // to the bottom even if content is shorter than screen
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // Push footer to the bottom of the screen
+    > .footer {
+        margin-top: auto;
+    }
+    // Prevent child elements from shrinking when content
+    // is taller than the screen (quirk of having flex parent)
+    > * {
+        flex-shrink: 0;
+    }
+}
+
+html,
+body {
+    font-family: "Roboto" !important;
+    user-select: none;
+}
+
+button {
+    user-select: none;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.text-grey {
+    color: #a7a7b3;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+::-webkit-scrollbar-thumb {
+    background-color: #848484;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #cacaca;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.normalBtn {
+    background: #5f07b8 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 52px #00000029;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    padding: 0.5rem 1.5rem;
+    outline: none !important;
+    border: none !important;
+    transition: all 0.3s;
+
+    &:hover {
+        background: #860ffd 0% 0% no-repeat padding-box;
+    }
+}
+
+.modalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition: all 0.3s;
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+        user-select: auto;
+    }
+
+    .dialog__overlay {
+        position: fixed;
+        z-index: 98;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+    }
+}

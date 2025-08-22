@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27.83" height="27.83" viewBox="0 0 27.83 27.83">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.094" y1="0.097" x2="1.082" y2="1.111" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fe129a"/>
+      <stop offset="0.873" stop-color="#6708b6"/>
+      <stop offset="1" stop-color="#5f07b8"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_32" data-name="Group 32" transform="translate(0)">
+    <path id="Path_13" data-name="Path 13" d="M4.584,9v4.575H.2v2.1H4.584v4.384h2.1V15.672h4.384v-2.1H6.681V9Z" transform="translate(-0.2 7.774)" fill="#fe129a"/>
+    <path id="Union_2" data-name="Union 2" d="M8.006,23.446v-2.1H21.349V2.1H2.1V15.25H0V2.1A2.167,2.167,0,0,1,.571.571,2.167,2.167,0,0,1,2.1,0H21.349a2.165,2.165,0,0,1,1.525.571A2.538,2.538,0,0,1,23.446,2.1V21.349a2.165,2.165,0,0,1-.571,1.525,2.536,2.536,0,0,1-1.525.571Zm-.953-5.528A3.152,3.152,0,0,1,6.1,15.631a4.012,4.012,0,0,1,.953-2.478A3.96,3.96,0,0,1,9.34,12.2c.382,0,.763.19,1.144.19a4.15,4.15,0,0,1,.953.571v-8.2h5.338v2.1h-4V15.44a2.925,2.925,0,0,1-.953,2.477,4.01,4.01,0,0,1-2.478.953A3.017,3.017,0,0,1,7.053,17.918Z" transform="translate(4.384)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

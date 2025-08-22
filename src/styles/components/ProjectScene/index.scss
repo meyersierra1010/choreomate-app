@@ -1,0 +1,20 @@
+@import "./CanvasScene.scss";
+@import "./ContextMenu.scss";
+@import "./BottomFrameBar.scss";
+@import "./LeftSideBar.scss";
+@import "./Loading.scss";
+
+.sceneWrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__rightSide {
+        position: relative;
+        width: calc(100% - 270px);
+        height: 100%;
+    }
+}

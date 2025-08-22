@@ -1,0 +1,162 @@
+@keyframes musicPlaceHolderShimmer {
+    0% {
+        background-position: -568px 0;
+    }
+    100% {
+        background-position: 568px 0;
+    }
+}
+
+.addMusicSection {
+    position: absolute;
+    background: #18192d 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 71px #24244040;
+    border-radius: 10px;
+    transform: translate3d(-50%, -50%, 0);
+    left: 50%;
+    top: 50%;
+    z-index: 99;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    .myMusics__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        h1 {
+            text-align: left;
+            font-size: 22px;
+            letter-spacing: 0px;
+            color: #ffffff;
+            margin: 0 !important;
+        }
+
+        span {
+            border: 1px solid #123;
+            border-radius: 100vw;
+            padding: 0 0.5rem;
+            background-color: #123;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .myMusics__container {
+        width: 100%;
+        overflow: auto;
+        display: flex;
+    }
+
+    .myMusics__wrapper {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0.5rem;
+        width: 800px;
+        min-height: 200px;
+        max-height: 450px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        .item {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: transparent;
+            padding: 0rem 2rem;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            color: #ffffff;
+            font-size: 18px;
+            height: 67px;
+
+            .placeholder {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: #2e2424;
+
+                .animatedBackground {
+                    animation-duration: 1.25s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: infinite;
+                    animation-name: musicPlaceHolderShimmer;
+                    animation-timing-function: linear;
+                    background: darkgray;
+                    background: linear-gradient(
+                        120deg,
+                        #252645 10%,
+                        #4b4e8f 21.5%,
+                        #252645 33%
+                    );
+                    background-size: 1200px 200px;
+                    height: 100%;
+                    position: relative;
+                }
+            }
+
+            &:hover,
+            &.active {
+                background: #515270;
+            }
+        }
+    }
+
+    .addMusicBtn {
+        background: #fff;
+        color: #18192d;
+        font-weight: 700;
+
+        &:hover {
+            background: #5f07b8;
+            color: white;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            background-color: #727272 !important;
+            color: #18192d;
+        }
+    }
+
+    .closeBtn {
+        background: #515270;
+
+        &:hover {
+            background: #7d7d90;
+        }
+    }
+
+    .myMusics__btnGroup {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    @media screen and (max-width: 640px) {
+        right: unset;
+        transform: translate(-50%, -50%);
+        top: 45%;
+        left: 50%;
+        max-width: 90%;
+
+        .myMusics__container {
+            height: 250px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.projects-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h1 {
+        font-size: 1.6rem;
+        margin: 0;
+        color: #383838;
+    }
+
+    
+    .header__btn__wrapper {
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+    }
+    
+    @media screen and (max-width: 640px) {
+        justify-content: space-around;
+        gap: .5rem;
+
+    }
+}

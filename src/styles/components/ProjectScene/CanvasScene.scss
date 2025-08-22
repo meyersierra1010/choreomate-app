@@ -1,0 +1,32 @@
+.canvasScene {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 240px);
+    overflow: hidden;
+
+    .sceneStatus {
+        position: absolute;
+        top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        transform: translateX(-50%);
+        left: 50%;
+        background: #e5e28f42;
+        border-radius: 5px;
+        border: 1px solid #11223342;
+        padding: 0.2rem 0.4rem;
+        transition: all 0.5s;
+
+        .spinner-border {
+            width: 1rem;
+            height: 1rem;
+            border-width: 0.1em;
+        }
+
+        &.disable {
+            top: -40px;
+        }
+    }
+}

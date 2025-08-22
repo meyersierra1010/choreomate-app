@@ -1,0 +1,55 @@
+{
+  "name": "choreomate-project",
+  "version": "0.1.0",
+  "private": true,
+  "keywords": [
+    "choreomate"
+  ],
+  "dependencies": {
+    "@analytics/google-analytics": "0.2.2",
+    "@fontsource/roboto": "^4.5.8",
+    "@react-three/drei": "^9.36.0",
+    "@react-three/fiber": "^8.8.10",
+    "@stripe/stripe-js": "1.11.0",
+    "@supabase/supabase-js": "1.35.6",
+    "@use-gesture/react": "^10.2.24",
+    "@vercel/analytics": "^0.1.11",
+    "analytics": "0.3.1",
+    "aws-sdk": "^2.601.0",
+    "bootstrap": "4.4.1",
+    "formdata-node": "^5.0.0",
+    "got": "^12.5.3",
+    "gsap": "^3.11.4",
+    "immer": "^9.0.19",
+    "next": "12.3.1",
+    "node-fetch": "^3.3.0",
+    "posthog-js": "^1.51.5",
+    "query-string": "^7.1.1",
+    "raw-body": "2.4.1",
+    "react": "18.2.0",
+    "react-bootstrap": "1.6.1",
+    "react-dom": "18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-feather": "^2.0.10",
+    "react-hook-form": "6.15.1",
+    "react-query": "3.32.1",
+    "react-tooltip": "^5.10.5",
+    "sass": "1.32.13",
+    "stripe": "8.132.0",
+    "three": "^0.145.0",
+    "uuidv4": "^6.2.13",
+    "zustand": "^4.3.2"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "stripe-webhook": "stripe listen --forward-to localhost:3000/api/stripe-webhook",
+    "lint": "next lint"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-next": "12.3.0",
+    "next-transpile-modules": "^9.1.0"
+  }
+}

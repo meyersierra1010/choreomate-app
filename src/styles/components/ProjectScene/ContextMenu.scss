@@ -1,0 +1,53 @@
+.contextMenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate3d(955px, 187px, 0);
+    min-width: max-content;
+    z-index: auto;
+
+    min-width: 220px;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 5px;
+    box-shadow: rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px;
+
+    &.open {
+        animation: fadeIn .5s;
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    &.close {
+        animation: fadeOut .5s;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .menuItem {
+        font-size: 13px;
+        line-height: 1;
+        color: rgb(87, 70, 175);
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        height: 25px;
+        padding: 0px 5px 0px 25px;
+        position: relative;
+        user-select: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            background: rgb(100, 86, 207);
+            color: rgb(228, 228, 228);
+        }
+    }
+
+    .separator {
+        height: 1px;
+        background-color: rgb(215, 207, 249);
+        margin: 5px;
+    }
+}
